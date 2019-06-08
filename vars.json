@@ -16,7 +16,7 @@
     "src/",
     "build.gradle.kts",
     "settings.gradle.kts",
-    "LICENSE",
+    "LICENSE_TEMPLATE",
     "README_TEMPLATE.md"
   ]
 }

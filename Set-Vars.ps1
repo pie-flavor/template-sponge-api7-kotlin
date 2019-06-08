@@ -48,4 +48,6 @@ foreach ($fileLine in $varfile.files)
 Remove-Item ./vars.json
 Remove-Item ./README.md
 Move-Item ./README_TEMPLATE.md ./README.md
+Remove-Item ./LICENSE
+Move-Item ./LICENSE_TEMPLATE ./LICENSE
 Remove-Item -LiteralPath $MyInvocation.MyCommand.Path -Force
