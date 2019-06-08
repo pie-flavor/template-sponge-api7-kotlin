@@ -1,0 +1,29 @@
+# Gradle stuff
+.gradle/
+build/
+
+# IDEA stuff
+.idea/
+target/
+out/
+
+# Plugin stuff
+run/
+
+# Eclipse stuff
+.classpath
+.project
+.settings/
+
+# VSC stuff
+.vs/
+
+
+# Windows stuff
+Desktop.ini
+Thumbs.db
+*.bak
+
+# Mac stuff
+.DS_Store
+_MACOSX

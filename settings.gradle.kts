@@ -1,0 +1,1 @@
+rootProject.name = "PS_TEMPLATE_PROJECT_NAME"

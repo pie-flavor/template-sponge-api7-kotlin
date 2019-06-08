@@ -1,0 +1,22 @@
+{
+  "vars": {
+    "1/PLUGIN_ID": "",
+    "2/PLUGIN_NAME": "",
+    "3/VERSION": "0.1.0",
+    "4/PROJECT_NAME": "$PLUGIN_NAME",
+    "5/PLUGIN_DESCRIPTION": "",
+    "6/BASE_PACKAGE_NAME": "",
+    "7/USER_NAME": "",
+    "8/GROUP_NAME": "",
+    "9/GITHUB_USER_NAME": "$USER_NAME",
+    "10/USER_REAL_NAME": "",
+    "11/USER_EMAIL": ""
+  },
+  "files": [
+    "src/",
+    "build.gradle.kts",
+    "settings.gradle.kts",
+    "LICENSE",
+    "README_TEMPLATE.md"
+  ]
+}
