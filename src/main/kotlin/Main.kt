@@ -12,6 +12,7 @@ import org.spongepowered.api.config.DefaultConfig
 import org.spongepowered.api.event.Listener
 import org.spongepowered.api.event.game.state.GamePreInitializationEvent
 import org.spongepowered.api.plugin.Plugin
+import java.nio.file.Files
 import java.nio.file.Path
 import javax.inject.Inject
 
@@ -42,6 +43,9 @@ class Main @Inject constructor(
     @[Listener PublishedApi]
     internal fun onPreInit(e: GamePreInitializationEvent) {
         plugin = this
+        if (!Files.exists(file)) {
+            asset.copyToFile(file)
+        }
         config = loader.load().getValue(typeTokenOf<Config>())!!
     }
 
