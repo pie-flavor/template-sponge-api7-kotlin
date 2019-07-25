@@ -96,10 +96,13 @@ publishing {
         }
         repositories {
             maven {
-                url = uri(project.properties["spongePublishingUri"].toString())
+                val spongePublishingUri: String by project
+                val spongePublishingUsername: String by project
+                val spongePublishingPassword: String by project
+                url = uri(spongePublishingUri)
                 credentials {
-                    username = project.properties["spongePublishingUsername"].toString()
-                    password = project.properties["spongePublishingPassword"].toString()
+                    username = spongePublishingUsername
+                    password = spongePublishingPassword
                 }
             }
         }
