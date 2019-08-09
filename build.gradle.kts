@@ -52,6 +52,7 @@ val shadowJar = tasks.named<ShadowJar>("shadowJar") {
     archiveClassifier.set("")
     relocate("kotlin", "PS_TEMPLATE_BASE_PACKAGE_NAME.runtime.kotlin")
     relocate("flavor.pie.kludge", "PS_TEMPLATE_BASE_PACKAGE_NAME.util.kludge")
+    minimize()
 }
 
 tasks.build {
