@@ -50,4 +50,6 @@ Remove-Item ./README.md
 Move-Item ./README_TEMPLATE.md ./README.md
 Remove-Item ./LICENSE
 Move-Item ./LICENSE_TEMPLATE ./LICENSE
+Move-Item ./scripts_TEMPLATE ./scripts
+Copy-Item ./scripts/pre-commit ./git/hooks/
 Remove-Item -LiteralPath $MyInvocation.MyCommand.Path -Force

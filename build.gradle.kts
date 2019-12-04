@@ -7,6 +7,7 @@ plugins {
     id("com.github.johnrengelman.shadow") version "5.0.0"
     id("flavor.pie.promptsign") version "1.1.0"
     id("maven-publish")
+    id("net.minecrell.licenser") version "0.4.1"
 }
 
 group = "PS_TEMPLATE_GROUP_NAME"
@@ -78,7 +79,11 @@ publishing {
                 licenses {
                     license {
                         name.set("MIT License")
-                        url.set("https://github.com/PS_TEMPLATE_GITHUB_USER_NAME/PS_TEMPLATE_PROJECT_NAME/blob/master/LICENSE")
+                        url.set("https://opensource.org/licenses/MIT")
+                    }
+                    license {
+                        name.set("Apache License version 2.0")
+                        url.set("https://opensource.org/licenses/Apache-2.0")
                     }
                 }
                 developers {
@@ -96,16 +101,21 @@ publishing {
             }
         }
         repositories {
-            maven {
-                val spongePublishingUri: String by project
-                val spongePublishingUsername: String by project
-                val spongePublishingPassword: String by project
-                url = uri(spongePublishingUri)
-                credentials {
-                    username = spongePublishingUsername
-                    password = spongePublishingPassword
+            val githubToken: String? by project
+            if (githubToken != null) {
+                maven {
+                    url = uri("https://maven.pkg.github.org/PS_TEMPLATE_GITHUB_USER_NAME/PS_TEMPLATE_PROJECT_NAME")
+                    credentials {
+                        username = "PS_TEMPLATE_GITHUB_USER_NAME"
+                        password = githubToken
+                    }
                 }
             }
         }
     }
+}
+
+license {
+    header = project.file("HEADER.txt")
+    exclude("**/*.conf")
 }

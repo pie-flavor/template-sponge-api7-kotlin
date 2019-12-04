@@ -17,6 +17,8 @@
     "build.gradle.kts",
     "settings.gradle.kts",
     "LICENSE_TEMPLATE",
-    "README_TEMPLATE.md"
+    "README_TEMPLATE.md",
+    ".github_TEMPLATE/",
+    "HEADER.txt"
   ]
 }
