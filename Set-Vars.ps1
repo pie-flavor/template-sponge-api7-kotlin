@@ -1,3 +1,10 @@
+<#
+Copyright (c) 2018 Adam Spofford <aspofford.as@gmail.com>
+
+Licensed under the Do What The Fuck You Want To Public License version 2 <http://www.wtfpl.net/about/>. This file may be copied,
+modified, and redistributed in any way you can think of, as well as any that you can't.
+#>
+
 #Requires -Version 6.0
 
 $values = @{}
