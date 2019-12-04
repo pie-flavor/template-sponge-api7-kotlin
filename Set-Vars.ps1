@@ -33,6 +33,15 @@ foreach ($var in $keys)
         $values[$var] = $value
     }
 }
+foreach ($movePath in $varfile.move)
+{
+    $templatePath = "$( $movePath )_TEMPLATE"
+    if (Test-Path $movePath)
+    {
+        Remove-Item $movePath
+    }
+    Move-Item $templatePath $movePath
+}
 foreach ($fileLine in $varfile.files)
 {
     foreach ($file in Get-ChildItem -Recurse -File $fileLine)
@@ -45,11 +54,9 @@ foreach ($fileLine in $varfile.files)
         $content.Replace("PS_BUILTIN_YEAR", (Get-Date).Year) | Set-Content $file
     }
 }
+foreach ($copyItem in $varfile.copy.GetEnumerator())
+{
+    Copy-Item $copyItem.Name $copyItem.Value
+}
 Remove-Item ./vars.json
-Remove-Item ./README.md
-Move-Item ./README_TEMPLATE.md ./README.md
-Remove-Item ./LICENSE
-Move-Item ./LICENSE_TEMPLATE ./LICENSE
-Move-Item ./scripts_TEMPLATE ./scripts
-Copy-Item ./scripts/pre-commit ./git/hooks/
 Remove-Item -LiteralPath $MyInvocation.MyCommand.Path -Force

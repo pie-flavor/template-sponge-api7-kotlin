@@ -16,9 +16,18 @@
     "src/",
     "build.gradle.kts",
     "settings.gradle.kts",
-    "LICENSE_TEMPLATE",
-    "README_TEMPLATE.md",
-    ".github_TEMPLATE/",
+    "LICENSE",
+    "README.md",
+    ".github/",
     "HEADER.txt"
-  ]
+  ],
+  "move": [
+    "LICENSE",
+    "README",
+    ".github",
+    "scripts"
+  ],
+  "copy": {
+    "scripts/pre-commit": ".git/hooks"
+  }
 }
