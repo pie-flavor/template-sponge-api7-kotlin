@@ -18,8 +18,7 @@
     "settings.gradle.kts",
     "LICENSE",
     "README.md",
-    ".github/",
-    "HEADER.txt"
+    ".github/"
   ],
   "move": [
     "LICENSE",

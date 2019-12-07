@@ -1,4 +1,0 @@
-Copyright (c) PS_BUILTIN_YEAR PS_TEMPLATE_USER_REAL_NAME <PS_TEMPLATE_USER_EMAIL>
-
-Licensed under the MIT License <LICENSE-MIT> or the Apache License version 2.0 <LICENSE-APACHE>, at your option.
-This file may not be copied, modified, or distributed except according to those terms.

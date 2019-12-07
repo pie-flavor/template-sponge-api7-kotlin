@@ -81,10 +81,6 @@ publishing {
                         name.set("MIT License")
                         url.set("https://opensource.org/licenses/MIT")
                     }
-                    license {
-                        name.set("Apache License version 2.0")
-                        url.set("https://opensource.org/licenses/Apache-2.0")
-                    }
                 }
                 developers {
                     developer {
@@ -116,6 +112,5 @@ publishing {
 }
 
 license {
-    header = project.file("HEADER.txt")
     exclude("**/*.conf")
 }
