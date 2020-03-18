@@ -22,7 +22,7 @@
   ],
   "move": [
     "LICENSE",
-    "README",
+    "README.md",
     ".github",
     "scripts"
   ],
