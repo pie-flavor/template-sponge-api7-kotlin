@@ -36,7 +36,7 @@ dependencies {
     val kotlin = kotlin("stdlib-jdk8")
     api(kotlin)
     shadow(kotlin)
-    val kludge = create(group = "com.github.pie-flavor", name = "kludge", version = "477392a")
+    val kludge = create(group = "com.github.pie-flavor", name = "kludge", version = "07c6d0a")
     implementation(kludge)
     shadow(kludge)
     val bstats = create(group = "org.bstats", name = "bstats-sponge-lite", version = "1.4")
